@@ -36,13 +36,47 @@ li {
   max-width: 100%;
 }
 
+.slider {
+  -webkit-appearance: none;
+  width: 10%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
 .slidecontainer {
   position: fixed; /* Use fixed positioning to place it relative to the viewport */
-  left: 86%; /* This positions the left edge of the container at the center of the screen */
-  bottom: 0; /* This positions the container at the bottom of the screen */
+  left: 94%; /* This positions the left edge of the container at the center of the screen */
+  bottom: 1%; /* This positions the container at the bottom of the screen */
   transform: translateX(-50%); /* This moves the container back to the left by half its width, centering it horizontally */
-  width: 80%; /* Adjust the width of the slider container as needed */
+  width: 100%; /* Adjust the width of the slider container as needed */
   z-index: 9999;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 50%;
+  background: #ffffff; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 50%;
+  background: #ffffff; /* Green background */
+  cursor: pointer; /* Cursor on hover */
 }
 
 .clicky {
@@ -264,6 +298,17 @@ a.lmao {
   justify-content: center;
   z-index: 2;
   height: 100vh;
+}
+
+.blackBox3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center horizontally */
+  z-index: 2;
+  height: 5vh;
+  color: white; /* Set font color to white */
+  font-family: monospace; /* Set font family to monospace */
 }
 
 .blackBox1 h1, .blackBox1 ul {

@@ -80,6 +80,8 @@ function showToast(message) {
     }, 1000 + 500);
 }
 
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+
 document.addEventListener("DOMContentLoaded", function() {
   var slider = document.getElementById("myRange");
 
@@ -96,13 +98,4 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
   var slider = document.getElementById("myRange");
   slider.value = h;
-  function preloadImages() {
-    for (let i = 0; i < 24; i++) {
-        const imageName = ('0' + i).slice(-2) + '00';
-        const imagePath = `images/sky/${imageName}.png`;
-        const img = new Image();
-        img.src = imagePath;
-    }
-  }
-  preloadImages();
 });

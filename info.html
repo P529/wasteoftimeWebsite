@@ -5,27 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donation Disclaimer</title>
     <style>
-        body {
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
             background-color: black;
             color: white;
             font-family: monospace;
-            margin: 0;
-            padding: 20px;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            text-align: center;
+            padding: 20px;
         }
         .container {
             max-width: 600px;
         }
-        h1 {
-            font-size: 24px;
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
+        h1, p {
+            margin: 20px 0;
         }
         .back-button {
             position: absolute;
@@ -35,21 +39,27 @@
             text-decoration: none;
             font-size: 25px;
         }
+        .footer {
+            text-align: center;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
-    <a class="back-button" href="index.html">< Back</a>
-    <div class="container">
-        <h1>Donation Disclaimer</h1>
-        <p>
-            Thank you for considering a donation. Your support helps cover the server costs of both Masonic Creative and Astral Creative.
-        </p>
-        <p>
-            Please note that the combined monthly server cost for these initiatives is €60. Any excess donations received will be allocated towards the server costs for the following month.
-        </p>
-        <p>
-            Your support is greatly appreciated and vital to our continued operations.
-        </p>
+    <div class="main-content">
+        <a class="back-button" href="index.html">< Back</a>
+        <div class="container">
+            <h1>Donation Disclaimer</h1>
+            <p>Thank you for considering a donation. Your support helps cover the server costs of both Masonic Creative and Astral Creative.</p>
+            <p>Please note that the combined monthly server cost for these initiatives is €60. Any excess donations received will be allocated towards the server costs for the following month.</p>
+            <p>Your support is greatly appreciated and vital to our continued operations.</p>
+        </div>
     </div>
+    <div class="footer">
+        © <span id="currentYear">2023</span> Wasteofti.me. All rights reserved. | P529
+    </div>
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
