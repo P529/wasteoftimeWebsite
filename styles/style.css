@@ -1,0 +1,341 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  margin: 0px;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-family: monospace;
+  font-size: 80px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  color: rgb(255, 255, 255);
+  font-family: monospace;
+  font-size: 30px;
+}
+
+.clicky {
+  display: inline-block; /* Or 'block', depending on your layout needs */
+  color: rgb(255, 255, 255);
+  font-family: monospace;
+  font-size: 40px;
+  padding: 10px; /* Add padding to increase the clickable area */
+  cursor: pointer; /* To visually indicate the element is clickable */
+}
+
+.header {
+  z-index: 10;
+  align-items: center;
+  height: 80px;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 80px;
+  margin-right: 80px;
+  font-family: monospace;
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.336);
+}
+
+.bep {
+  margin-top: 180px;
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    z-index: 2;
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+a {
+  z-index: 2;
+  color: white;
+  text-decoration: none;
+}
+
+.pillThing {
+  z-index: 10;
+  cursor: pointer;
+  position: relative;
+  top: 50px;
+  min-width: 80px;
+  min-height: 100px;
+  border-radius: 150px;
+  background: #000000;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.336);
+}
+
+a.lmao {
+  z-index: 2;
+  position: relative;
+  padding-left: 20px;
+}
+
+.iconDiv {
+  z-index: 2;
+  display: flex;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  z-index: 2;
+  width: 70px;
+}
+
+.leftSide {
+  z-index: 2;
+  width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  z-index: 1;
+  height: calc(100vh - 80px);
+  min-height: 300px;
+  background: url(../images/sky/1800.png) center center fixed;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
+
+.image2 {
+  z-index: 1;
+  height: 100vh;
+  min-height: 300px;
+  background: url(../images/sky/0100.png) center center fixed;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
+
+.sticky {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 80px;
+  padding-top: 50px;
+  top: -50px;
+  min-width: 80px;
+  min-height: 100px;
+  border-radius: 150px;
+  background: #000000;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.336);
+}
+
+.sticky + .content {
+  z-index: 3;
+  padding-top: 102px;
+}
+
+#fadeObject {
+  z-index: 2;
+  height: 100px;
+  transition: opacity 1s;
+}
+
+#overlay {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 40%;
+  /* Overlay half of the image */
+  width: 100%;
+
+  /* Create linear gradient */
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+#overlay h1 {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  margin-left: 80px;
+}
+
+.headlineCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* or any color you prefer */
+  font-size: 24px; /* or any size you prefer */
+}
+
+.headline-parent { /* Replace with the actual class or ID of the parent */
+  position: relative;
+}
+
+.toast {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  color: rgb(255, 255, 255);
+  font-family: monospace;
+  font-size: 15px;
+  top: 80%;
+  left: 75%;
+  cursor: pointer;
+  position: absolute;
+  color: white;
+  z-index: 9999;
+}
+
+.infoToast {
+  color: rgb(255, 255, 255);
+  font-family: monospace;
+  font-size: 15px;
+  top: 80%;
+  left: 35%;
+  cursor: pointer;
+  position: absolute;
+  color: white;
+  z-index: 9999;
+}
+
+#fadeObject2 {
+  z-index: 2;
+  height: 100px;
+  transition: opacity 1s;
+}
+
+#floaty {
+  z-index: 1;
+  position: absolute;
+  bottom: -200vh;
+  height: 50%;
+  /* Overlay half of the image */
+  width: 100%;
+
+  /* Create linear gradient */
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+#floaty h1 {
+  z-index: 2;
+  bottom: 0px;
+  position: absolute;
+  margin-left: 80px;
+}
+
+.blackBox1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  height: 100vh;
+}
+
+.blackBox1 h1, .blackBox1 ul {
+  text-align: center;
+  width: 100%; /* Ensure they take up the full width of their parent if needed */
+}
+
+.youtubeEmbed {
+  width: 60%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 40px;
+  justify-content: space-evenly;
+  clear: both;
+  text-align: center;
+}
+
+.youtubeEmbedBar {
+  border-radius: 10px;
+  border-top: 10px solid #ffbb00;
+  box-shadow: 16px 13px 42px -17px rgba(0, 0, 0, 0.69);
+  height: 295px;
+  width: 500px;
+}
+
+@media only screen and (min-width: 1200px) {
+  #fadeObject a {
+    z-index: 4;
+    padding-top: 80px;
+  }
+
+  #fadeObject a span {
+    z-index: 4;
+    position: absolute;
+    top: 87%;
+    left: 95%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb07 4s infinite;
+    animation: sdb07 4s infinite;
+    opacity: 0;
+    box-sizing: border-box;
+  }
+
+  #fadeObject a span:nth-of-type(1) {
+    z-index: 4;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+
+  #fadeObject a span:nth-of-type(2) {
+    z-index: 4;
+    top: 89%;
+    -webkit-animation-delay: 0.15s;
+    animation-delay: 0.15s;
+  }
+
+  #fadeObject a span:nth-of-type(3) {
+    z-index: 4;
+    top: 91%;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+  }
+
+  @-webkit-keyframes sdb07 {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes sdb07 {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+}
