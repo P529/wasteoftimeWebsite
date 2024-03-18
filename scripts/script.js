@@ -4,8 +4,6 @@ now.setMinutes(Math.ceil(now.getMinutes() / 30) * 30);
 var hours = now.getHours()
 var h = ('0' + hours).slice(-2)
 var h2 = ('0' + (hours + 12) % 24).slice(-2)
-console.log(h)
-console.log(h2)
 document.getElementById("myImage").style.background = `url(../images/sky/${h}00.png) center center fixed`
 document.getElementById("myImage2").style.background = `url(../images/sky/${h2}00.png) center center fixed`
 document.getElementById("myIcon").onclick = function () { onclick() };
@@ -40,14 +38,11 @@ headlineElement.addEventListener("click", function() {
         });
 });
 
-// Event listener for mouseenter on headline element
 headlineElement.addEventListener("mouseenter", function() {
   toastStuff(true);
 });
 
-// Event listener for mouseleave on headline element
 headlineElement.addEventListener("mouseleave", function() {
-  console.log("mouse elft")
   toastStuff(false);
 });
 
@@ -64,7 +59,6 @@ function toastStuff(bool) {
     removeToast()
   }
 
-  // Function to handle removing the toast
   function removeToast() {
           toast.remove();
   }
@@ -79,13 +73,11 @@ function showToast(message) {
     headlineElement.parentElement.appendChild(toast);
     const headlineRect = headlineElement.getBoundingClientRect();
 
-    // Wait for the message to show for a bit before starting fade out
     setTimeout(function() {
         toast.style.opacity = '0';
-    }, 500); // Start fade out a bit before removal to see the effect
+    }, 500);
   
-    // Wait for the fade out transition, then remove
     setTimeout(function() {
         toast.remove();
-    }, 1000 + 500); // Plus the transition time to ensure it's seen
+    }, 1000 + 500);
 }
