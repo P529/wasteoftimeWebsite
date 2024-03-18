@@ -64,8 +64,6 @@ function toastStuff(bool) {
   }
 }
 
-
-
 function showToast(message) {
     const toast = document.createElement("div");
     toast.classList.add("toast");
@@ -81,3 +79,30 @@ function showToast(message) {
         toast.remove();
     }, 1000 + 500);
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  var slider = document.getElementById("myRange");
+
+  slider.addEventListener("input", function() {
+    updateBackgroundImage(this.value);
+  });
+
+  function updateBackgroundImage(value) {
+    var imageName = (value * 100).toString().padStart(4, '0');
+    document.getElementById("myImage").style.background = `url(../images/sky/${imageName}.png) center center fixed`
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  var slider = document.getElementById("myRange");
+  slider.value = h;
+  function preloadImages() {
+    for (let i = 0; i < 24; i++) {
+        const imageName = ('0' + i).slice(-2) + '00';
+        const imagePath = `images/sky/${imageName}.png`;
+        const img = new Image();
+        img.src = imagePath;
+    }
+  }
+  preloadImages();
+});

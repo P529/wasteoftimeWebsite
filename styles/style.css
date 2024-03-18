@@ -21,13 +21,28 @@ h1 {
 }
 
 ul {
+  max-width: 90vw;
   list-style-type: none;
+  overflow-x: auto;
+  margin: 0;
+  padding: 0 5%;
 }
 
 li {
   color: rgb(255, 255, 255);
   font-family: monospace;
   font-size: 30px;
+  word-break: break-word; /* Helps with long unbroken text */
+  max-width: 100%;
+}
+
+.slidecontainer {
+  position: fixed; /* Use fixed positioning to place it relative to the viewport */
+  left: 86%; /* This positions the left edge of the container at the center of the screen */
+  bottom: 0; /* This positions the container at the bottom of the screen */
+  transform: translateX(-50%); /* This moves the container back to the left by half its width, centering it horizontally */
+  width: 80%; /* Adjust the width of the slider container as needed */
+  z-index: 9999;
 }
 
 .clicky {
